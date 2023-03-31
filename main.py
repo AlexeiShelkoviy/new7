@@ -8,7 +8,7 @@ def divider(a, b):
         if b > 100:
             raise IndexError("b must be less than or equal to 100")
         return a / b
-    except (TypeError, ValueError, IndexError) as e:
+    except (TypeError, ValueError, IndexError, ZeroDivisionError) as e:
         print(f"Error: {str(e)}")
         return None
 
@@ -19,3 +19,4 @@ for key in data:
         result.append(res)
 
 print(result)
+
